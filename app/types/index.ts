@@ -44,4 +44,18 @@ interface LeaderboardEntry {
   submissions: number;
 }
 
-export type { Category, CategoriesProps, Challenge, TeamProfile, LeaderboardEntry };
+interface Submission {
+  id: number;
+  duration: string,
+  teamName: string;
+  challengeName: string;
+  time: string;
+  points: string | number;
+  status: "Judged" | "Not Judged";
+  selected: boolean;
+  description: string;
+  criteria: { text: string; points: number }[];
+  submission:string
+}
+
+export type { Category, CategoriesProps, Challenge, TeamProfile, LeaderboardEntry,Submission };

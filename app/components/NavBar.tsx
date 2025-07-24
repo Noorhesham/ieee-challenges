@@ -1,11 +1,18 @@
+"use client";
 import React from "react";
 import { Bell } from "lucide-react";
 import Link from "next/link";
-
+import { usePathname } from "next/navigation";
 const LOGO_URL = "/ieee.svg";
 const AVATAR_URL = "https://i.imgur.com/4hG3b2N.png";
 
 const Nav = () => {
+  const path = usePathname()
+  const NavLinks = [
+    { href: "/", label: "Categories" },
+    { href: "/challenges", label: "Challenges" },
+    { href: "/leaderboard", label: "Leaderboard" },
+  ]
   return (
     <div className="font-sans flex justify-center p-4">
       <header className="bg-white w-full max-w-7xl rounded-full shadow-lg">
@@ -16,21 +23,14 @@ const Nav = () => {
 
           <nav>
             <ul className="flex items-center gap-10 text-base font-semibold">
-              <li>
-                <Link href="/" className="text-[#F9A826]">
-                  Categories
-                </Link>
-              </li>
-              <li>
-                <Link href="/challenges" className="text-gray-800 transition-colors hover:text-[#F9A826]">
-                  Challenges
-                </Link>
-              </li>
-              <li>
-                <Link href="/leaderboard" className="text-gray-800 transition-colors hover:text-[#F9A826]">
-                  Leaderboard
-                </Link>
-              </li>
+              {NavLinks.map(link =>
+                <li key={link.label}>
+                  <Link href={link.href} 
+                  className={`transition-colors ${path === link.href ? "text-[#F9A826]" : "text-gray-800 hover:text-[#F9A826]"}`}>
+                    {link.label}
+                  </Link>
+                </li>
+              )}
             </ul>
           </nav>
           <div className="flex items-center gap-6">

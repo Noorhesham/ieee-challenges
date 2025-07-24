@@ -1,7 +1,7 @@
-import { DataScienceIcon, AiMlIcon, CybersecurityIcon, CloudComputingIcon } from "./components/Icons";
-import Categories from "./components/Categories";
-import { Category } from "./types";
-import Timer from "./components/Timer";
+import { DataScienceIcon, AiMlIcon, CybersecurityIcon, CloudComputingIcon } from "../components/Icons";
+import Categories from "../components/Categories";
+import { Category } from "../types/index";
+import Timer from "../components/Timer";
 
 const challengeCategories: Category[] = [
   { name: "Data Science", icon: <DataScienceIcon /> },

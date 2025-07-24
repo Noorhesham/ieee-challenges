@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { Clock, XCircle, Award } from "lucide-react";
-import { Challenge } from "../types";
-import MaxWidthWrapper from "../components/MaxWidthWrapper";
-import ChallengeDetails from "../components/challenges/ChallenageDetails";
-import ChallengeItem from "../components/challenges/ChallengeItem";
+import { Challenge } from "../../types/index";
+import MaxWidthWrapper from "../../components/MaxWidthWrapper";
+import ChallengeDetails from "../../components/challenges/ChallenageDetails";
+import ChallengeItem from "../../components/challenges/ChallengeItem";
 
 const Timer = () => <div className="text-2xl font-bold font-mono text-gray-800">02:25:20</div>;
 const challengesData: Challenge[] = [

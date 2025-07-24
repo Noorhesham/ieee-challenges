@@ -19,8 +19,8 @@ const AdminDashboardPage: React.FC = () => {
   const filterCategories = ["Data Scince", "AI & Machine Learning", "Cybersecurity", "Cloud Computing"];
 
   return (
-    <div className="  bg-gray-100">
-      <div className="flex gap-8 p-8">
+    <div className="bg-gray-100">
+      <div className="flex gap-8 ">
         <main className="flex-1 relative">
           <div className="bg-white p-6 rounded-2xl shadow-lg">
             {/* Filter Section */}
